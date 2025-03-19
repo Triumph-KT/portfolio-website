@@ -1,0 +1,82 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;  /* Evenly distributes left & right content */
+    align-items: center;
+    background: #333;
+    padding: 1px 20px; /* Adjusted padding for better spacing */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 1.8rem; /* Increase size */
+    font-weight: bold;
+    color: white; /* Ensure visibility */
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /* Adds more space between menu items */
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+}
+
+/* Subtle separators between navbar items */
+.nav-links a:not(:last-child)::after {
+    content: "|";
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 15px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Navbar for Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        background: #333;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.github-icon {
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .github-icon:hover {
+    transform: scale(1.2);
+    color: #ddd; /* Light hover effect */
+  }
+  
