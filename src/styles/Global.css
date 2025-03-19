@@ -141,6 +141,7 @@ body {
   color: #333;
 }
 
+/* Responsive Mobile Fixes */
 @media (max-width: 768px) {
   .page-wrapper {
     padding: 10px; /* Reduce padding */
@@ -181,5 +182,19 @@ body {
   .project-card {
     width: 100%; /* Full width */
     max-width: 300px; /* But limit the size */
+  }
+
+  /* Fix Footer for Mobile */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 10px;
+    background: #333;
+    color: white;
+    width: 100%;
   }
 }
